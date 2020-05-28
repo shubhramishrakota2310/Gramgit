@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Gramgit/static/css/main.6e6edea8.chunk.css",
-    "main.js": "/Gramgit/static/js/main.a0d6bc5e.chunk.js",
-    "main.js.map": "/Gramgit/static/js/main.a0d6bc5e.chunk.js.map",
+    "main.js": "/Gramgit/static/js/main.dc3a9bcc.chunk.js",
+    "main.js.map": "/Gramgit/static/js/main.dc3a9bcc.chunk.js.map",
     "runtime-main.js": "/Gramgit/static/js/runtime-main.b54b46f7.js",
     "runtime-main.js.map": "/Gramgit/static/js/runtime-main.b54b46f7.js.map",
-    "static/js/2.69ebc455.chunk.js": "/Gramgit/static/js/2.69ebc455.chunk.js",
-    "static/js/2.69ebc455.chunk.js.map": "/Gramgit/static/js/2.69ebc455.chunk.js.map",
+    "static/js/2.43622039.chunk.js": "/Gramgit/static/js/2.43622039.chunk.js",
+    "static/js/2.43622039.chunk.js.map": "/Gramgit/static/js/2.43622039.chunk.js.map",
     "index.html": "/Gramgit/index.html",
-    "precache-manifest.70b8f00f32cb8ef070905d0ee09ba3f7.js": "/Gramgit/precache-manifest.70b8f00f32cb8ef070905d0ee09ba3f7.js",
+    "precache-manifest.3786a32cae68156356cf5d928bed0fc5.js": "/Gramgit/precache-manifest.3786a32cae68156356cf5d928bed0fc5.js",
     "service-worker.js": "/Gramgit/service-worker.js",
     "static/css/main.6e6edea8.chunk.css.map": "/Gramgit/static/css/main.6e6edea8.chunk.css.map",
-    "static/js/2.69ebc455.chunk.js.LICENSE.txt": "/Gramgit/static/js/2.69ebc455.chunk.js.LICENSE.txt"
+    "static/js/2.43622039.chunk.js.LICENSE.txt": "/Gramgit/static/js/2.43622039.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b54b46f7.js",
-    "static/js/2.69ebc455.chunk.js",
+    "static/js/2.43622039.chunk.js",
     "static/css/main.6e6edea8.chunk.css",
-    "static/js/main.a0d6bc5e.chunk.js"
+    "static/js/main.dc3a9bcc.chunk.js"
   ]
 }
