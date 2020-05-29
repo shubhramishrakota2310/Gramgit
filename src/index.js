@@ -7,17 +7,39 @@ class Application extends React.Component {
       super(props);
       this.state = {
         file: null,
-        name:'',
-        caption:'',
-        data:[]
+        name:null,
+        caption:null,
+        data:[],
+       
       }
       this.handleChange = this.handleChange.bind(this)
     }
-    
-    handleChange(event) {
+    //Validates the image selected.
+    Filevalidation = () => { 
+      const fi = document.getElementById('file'); 
+      // Check if any file is selected. 
+      if (fi.files.length > 0) { 
+          for (var i = 0; i <= fi.files.length - 1; i++) { 
+
+              const fsize = fi.files.item(i).size; 
+              const file = Math.round((fsize / 1024)); 
+              // Validating the size of the file. 
+              if (file >= 2048) { 
+                  alert( 
+                    "File too big, please select a file less than 2mb"); 
+              }  else { 
+                  document.getElementById('size').innerHTML = '<b>'
+                  + file + '</b> KB'; 
+              } 
+          } 
+      } 
+  } 
+    handleChange= (event) => {
       this.setState({
-        file: URL.createObjectURL(event.target.files[0])
-      })
+        file: URL.createObjectURL(event.target.files[0]),
+        
+        }
+      )
     }
 
     handleNameChange = (event) => {
@@ -28,6 +50,7 @@ class Application extends React.Component {
       this.setState({ caption: event.target.value});
     };
 
+    
     handleSubmit = event => {
       event.preventDefault();
       const info = {name: this.state.name, caption: this.state.caption, file:<img src={this.state.file} alt="icon" width="600" />}
@@ -36,6 +59,8 @@ class Application extends React.Component {
         data: data
       });
     };
+
+    
    
   
     
@@ -53,13 +78,17 @@ class Application extends React.Component {
               <div className="input-group mb-2 mr-sm-2 mb-sm-0">
                 <input
                     type="text"
+                    required aria-required="true"//Ensures non-empty input.
                     className="form-control mb-2 mr-sm-2 mb-sm-0"
+                    placeholder="username"
                     value={this.state.name}
                     onChange={this.handleNameChange}/>
+
                 
                   <input
                       type="text"
-                      className="form-control"
+                      required aria-required="true"
+                      className="form-control"//Ensures non-empty input.
                       placeholder="caption"
                       value={this.state.caption}
                       onChange={this.handleCaptionChange}/>
@@ -67,9 +96,13 @@ class Application extends React.Component {
                 
                 <input
                       type="file"
+                      id="file"
+                      required aria-required="true"//Ensures non-empty input.
                       className="form-control"
                       placeholder="post"
-                      onChange={this.handleChange}/>
+                      onChange={this.handleChange}
+                      onChange={this.Filevalidation}/>
+                      
                       
                   </div>
                       
@@ -91,7 +124,7 @@ class Application extends React.Component {
     }
   }
 
-
+  //Display after submitting.
   const Card = props =>
   <div className="col-md-6 col-lg-3">
     <div className="card mb-3">
